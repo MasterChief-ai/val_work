@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 240 30% 8%;
+    --foreground: 0 0% 91%;
+
+    --card: 240 25% 12%;
+    --card-foreground: 0 0% 91%;
+
+    --popover: 240 25% 12%;
+    --popover-foreground: 0 0% 91%;
+
+    --primary: 351 100% 71%;
+    --primary-foreground: 240 30% 8%;
+
+    --secondary: 351 100% 77%;
+    --secondary-foreground: 240 30% 8%;
+
+    --muted: 240 20% 16%;
+    --muted-foreground: 240 10% 55%;
+
+    --accent: 340 80% 65%;
+    --accent-foreground: 0 0% 95%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 240 15% 20%;
+    --input: 240 15% 20%;
+    --ring: 351 100% 71%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 240 25% 10%;
+    --sidebar-foreground: 0 0% 91%;
+    --sidebar-primary: 351 100% 71%;
+    --sidebar-primary-foreground: 240 30% 8%;
+    --sidebar-accent: 240 20% 16%;
+    --sidebar-accent-foreground: 0 0% 91%;
+    --sidebar-border: 240 15% 20%;
+    --sidebar-ring: 351 100% 71%;
+
+    --gradient-bg: linear-gradient(135deg, hsl(240 30% 8%) 0%, hsl(250 25% 12%) 50%, hsl(240 30% 8%) 100%);
+    --glow-pink: 0 0 30px hsl(351 100% 71% / 0.4);
+    --glow-pink-strong: 0 0 60px hsl(351 100% 71% / 0.6);
+
+    font-family: 'Space Grotesk', sans-serif;
+  }
+
+  .dark {
+    --background: 240 30% 8%;
+    --foreground: 0 0% 91%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    overflow-x: hidden;
+  }
+}
+
+@layer utilities {
+  .font-mono-code {
+    font-family: 'JetBrains Mono', monospace;
+  }
+
+  .text-glow {
+    text-shadow: 0 0 20px hsl(351 100% 71% / 0.5), 0 0 40px hsl(351 100% 71% / 0.3);
+  }
+
+  .text-glow-subtle {
+    text-shadow: 0 0 10px hsl(351 100% 71% / 0.3);
+  }
+
+  .bg-gradient-dark {
+    background: linear-gradient(135deg, hsl(240 30% 6%) 0%, hsl(250 25% 11%) 50%, hsl(240 30% 8%) 100%);
+  }
+
+  .glass-card {
+    background: hsl(240 25% 12% / 0.6);
+    backdrop-filter: blur(16px);
+    border: 1px solid hsl(351 100% 71% / 0.15);
+  }
+
+  .neon-border {
+    border: 1px solid hsl(351 100% 71% / 0.3);
+    box-shadow: 0 0 15px hsl(351 100% 71% / 0.1), inset 0 0 15px hsl(351 100% 71% / 0.05);
+  }
+}
+
+@keyframes float-heart {
+  0% {
+    transform: translateY(100vh) rotate(0deg) scale(0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+    transform: translateY(90vh) rotate(15deg) scale(1);
+  }
+  90% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(-10vh) rotate(-15deg) scale(0.5);
+    opacity: 0;
+  }
+}
+
+@keyframes particle-float {
+  0%, 100% {
+    transform: translateY(0) translateX(0);
+    opacity: 0.3;
+  }
+  25% {
+    transform: translateY(-30px) translateX(15px);
+    opacity: 0.8;
+  }
+  50% {
+    transform: translateY(-15px) translateX(-10px);
+    opacity: 0.5;
+  }
+  75% {
+    transform: translateY(-40px) translateX(20px);
+    opacity: 0.7;
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 20px hsl(351 100% 71% / 0.3);
+  }
+  50% {
+    box-shadow: 0 0 40px hsl(351 100% 71% / 0.6), 0 0 80px hsl(351 100% 71% / 0.2);
+  }
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink-caret {
+  0%, 100% { border-color: hsl(351 100% 71%); }
+  50% { border-color: transparent; }
+}
+
+@keyframes gradient-shift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}

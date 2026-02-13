@@ -18,15 +18,15 @@ const CodeSection = () => {
               <span className="text-foreground">feelings</span> = {"{\n"}
               {"  "}
               <span className="text-muted-foreground">initial:</span>{" "}
-              <span className="text-accent">"just talking"</span>,{"\n"}
+              <span className="text-accent">"just talking / Getting to know her"</span>,{"\n"}
               {"  "}
-              <span className="text-muted-foreground">week_1:</span>{" "}
+              <span className="text-muted-foreground">month_2:</span>{" "}
               <span className="text-accent">"okay she's cool"</span>,{"\n"}
               {"  "}
-              <span className="text-muted-foreground">week_2:</span>{" "}
+              <span className="text-muted-foreground">month_3:</span>{" "}
               <span className="text-accent">"wait she's really cool"</span>,{"\n"}
               {"  "}
-              <span className="text-muted-foreground">month_1:</span>{" "}
+              <span className="text-muted-foreground">month_5:</span>{" "}
               <span className="text-accent">"omo, e don go far, can't stop thinking about her"</span>,{"\n"}
               {"  "}
               <span className="text-muted-foreground">valentine:</span>{" "}

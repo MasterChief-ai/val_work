@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bukky ❤</title>
     <meta name="description" content="heartfeltz" />
-    <meta name="author" content="Lovable" />
+    <meta name="author" content="Armi" />
 
     
     <meta property="og:title" content="Bukky ❤" />
@@ -14,13 +14,31 @@
     <meta property="og:image" content="" />
 
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@Lovable" />
+    <meta name="twitter:site" content="@Armi" />
     <meta name="twitter:image" content="" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   </head>
 
   <body>
+        <!-- Background Music -->
+    <audio id="bgMusic" loop>
+        <source src="/public/Olamide - Mukulu (SPOTISAVER).mp3" type="audio/mpeg">
+    </audio>
     <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
+    <script type="module" src="/src/main.tsx">
+            // ========== BACKGROUND MUSIC ==========
+      const bgMusic = document.getElementById('bgMusic');
+
+      // Try to autoplay when page loads
+      window.addEventListener('load', () => {
+          bgMusic.volume = 0.3; // Set volume to 30%
+          bgMusic.play().catch(() => {
+              // If autoplay is blocked, play on first click
+              document.addEventListener('click', () => {
+                  bgMusic.play();
+              }, { once: true });
+          });
+      });
+    </script>
   </body>
 </html>

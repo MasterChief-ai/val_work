@@ -20,25 +20,11 @@
   </head>
 
   <body>
-        <!-- Background Music -->
+    <!-- Background Music -->
     <audio id="bgMusic" loop>
-        <source src="/public/Olamide - Mukulu (SPOTISAVER).mp3" type="audio/mpeg">
+      <source src="/Olamide - Mukulu (SPOTISAVER).mp3" type="audio/mpeg">
     </audio>
     <div id="root"></div>
-    <script type="module" src="/src/main.tsx">
-            // ========== BACKGROUND MUSIC ==========
-      const bgMusic = document.getElementById('bgMusic');
-
-      // Try to autoplay when page loads
-      window.addEventListener('load', () => {
-          bgMusic.volume = 0.7; // Set volume to 30%
-          bgMusic.play().catch(() => {
-              // If autoplay is blocked, play on first click
-              document.addEventListener('click', () => {
-                  bgMusic.play();
-              }, { once: true });
-          });
-      });
-    </script>
+    <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
